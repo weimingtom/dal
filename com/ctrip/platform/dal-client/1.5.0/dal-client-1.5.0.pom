@@ -68,16 +68,6 @@
             <version>${commons-lang-version}</version>
         </dependency>
     </dependencies>
-    
-    
-    <distributionManagement>
-        <repository>
-            <id>internal.repo</id>
-            <name>Temporary Staging Repository</name>
-            <url>file://${project.build.directory}/mvn-repo</url>
-        </repository>
-    </distributionManagement>
-
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
         <resources>
@@ -90,7 +80,6 @@
             </resource>
         </resources>
         <plugins>
-        
 		    <plugin>
 		        <artifactId>maven-deploy-plugin</artifactId>
 		        <version>2.8.1</version>
@@ -124,8 +113,7 @@
 	                 <phase>deploy</phase>
 	                 </execution>
 	             </executions>
-	         </plugin>
-	         
+            </plugin>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
@@ -178,4 +166,11 @@
             </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+        <repository>
+            <id>internal.repo</id>
+            <name>Temporary Staging Repository</name>
+            <url>file://${project.build.directory}/mvn-repo</url>
+        </repository>
+    </distributionManagement>
 </project>
