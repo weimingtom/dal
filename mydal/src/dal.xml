@@ -1,0 +1,7 @@
+<dal name="test">
+	<databaseSets>
+		<databaseSet name="apkver" provider="mySqlProvider">
+            <add name="apkver" databaseType="Master" sharding="" connectionString="apkver"/>   
+		</databaseSet>
+	</databaseSets>
+</dal>

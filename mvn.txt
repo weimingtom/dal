@@ -1,0 +1,5 @@
+mvn compile
+mvn package
+mvn install
+mvn dependency:copy-dependencies -DoutputDirectory=lib   -DincludeScope=compile 
+mvn dependency:tree
